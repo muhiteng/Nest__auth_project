@@ -1,4 +1,4 @@
-import { Injectable, Param, Req } from '@nestjs/common';
+import { Body, Injectable, Param, Req } from '@nestjs/common';
 import { Request } from 'express';
 
 @Injectable()
@@ -9,9 +9,12 @@ export class UserService {
 }
 
 
-store(@Req() request: Request){
-  return request.body;
-}
+// store(@Req() request: Request){
+//   return request.body;
+// }
+store(body: any){
+    return body;
+  }
 
 // getUserId(@Param() userId:number ){
 //   return userId;
